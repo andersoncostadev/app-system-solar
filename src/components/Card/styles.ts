@@ -1,5 +1,4 @@
 import styled from 'styled-components/native';
-import {Image} from 'react-native';
 import {SvgUri} from 'react-native-svg';
 
 export const Container = styled.View`
@@ -35,7 +34,7 @@ export const InfoView = styled.View`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 5px;
 `;
 
 export const InfoPlanet = styled.Text`

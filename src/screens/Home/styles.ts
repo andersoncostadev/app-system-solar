@@ -9,9 +9,9 @@ export const Container = styled.SafeAreaView`
 
 export const Image = styled(ImageBackground).attrs({
   resizeMode: 'cover',
-  source: require('../../assets/bg.jpeg'),
+  source: require('../../assets/Images/bg.jpeg'),
 })`
   flex-grow: 1;
   justify-content: center;
-  padding-top: 100px;
+  padding-top: 50px;
 `;

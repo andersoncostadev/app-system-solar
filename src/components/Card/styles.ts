@@ -1,5 +1,6 @@
 import styled from 'styled-components/native';
 import {Image} from 'react-native';
+import {SvgUri} from 'react-native-svg';
 
 export const Container = styled.View`
   flex: 1;
@@ -17,15 +18,34 @@ export const CardView = styled.View`
   min-height: 150px;
 `;
 
-export const ImageCard = styled(Image).attrs({
-  source: require('../../assets/bg.jpeg'),
+export const ImageCard = styled(SvgUri).attrs({
+  width: '40%',
+  height: '100%',
 })`
-  width: 40%;
-  height: 100%;
   object-fit: contain;
   margin-right: 15px;
 `;
 
-export const Title = styled.Text`
+export const TextView = styled.View`
   flex: 1;
+`;
+
+export const InfoView = styled.View`
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+`;
+
+export const InfoPlanet = styled.Text`
+  font-size: 20px;
+  color: #ffffff;
+`;
+
+export const Title = styled.Text`
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: #ffffff;
 `;

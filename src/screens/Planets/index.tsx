@@ -4,7 +4,7 @@ import Card from "../../components/Card";
 import api from "../../services/api";
 import { IPlanet } from "../../types/types";
 
-import {Container, Image} from "./styles"
+import {Container, Image, TouchablePlanet} from "./styles"
 
  const Planets: React.FC = () => {
   const[data, setData] = useState<IPlanet[]>([])
@@ -23,12 +23,16 @@ import {Container, Image} from "./styles"
       data={data}
       style={{flex: 1, width:'100%'}}
       renderItem={({item})=> (
-        <Card
-          name={item.name}
-          image={item.image}
-          temperature={item.temperature}
-          size={item.size}
-        />
+        <TouchablePlanet
+          activeOpacity={0.7}
+        >
+          <Card
+            name={item.name}
+            image={item.image}
+            temperature={item.temperature}
+            size={item.size}
+          />
+        </TouchablePlanet>
         )}
         showsVerticalScrollIndicator = {false}
         keyExtractor={(item) => item.id}

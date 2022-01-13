@@ -1,17 +1,32 @@
-import {ImageBackground} from 'react-native';
+import {Image} from './../Planets/styles';
+import {ImageBackground, TouchableOpacity} from 'react-native';
 import styled from 'styled-components/native';
 
-export const Container = styled.SafeAreaView`
-  flex-grow: 1;
+export const Background = styled(ImageBackground).attrs({
+  risizeMode: 'cover',
+  source: require('../../assets/Images/bghome.jpeg'),
+})`
+  flex: 1;
+  justify-content: center;
+  padding-top: 50px;
+`;
+
+export const Container = styled.View`
+  flex: 1;
   justify-content: center;
   align-items: center;
 `;
 
-export const Image = styled(ImageBackground).attrs({
-  resizeMode: 'cover',
-  source: require('../../assets/Images/bg.jpeg'),
-})`
-  flex-grow: 1;
+export const IconContainer = styled.View`
+  flex: 1;
   justify-content: center;
-  padding-top: 50px;
+  align-items: center;
+`;
+
+export const Icon = styled(Image).attrs({
+  resizeMode: 'contain',
+  source: require('../../assets/Images/icone.png'),
+})`
+  height: auto;
+  width: 300px;
 `;

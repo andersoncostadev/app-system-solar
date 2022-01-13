@@ -1,11 +1,10 @@
 import React from 'react';
-import Home  from './screens/Home';
+import Routes from './routes';
 
 const App: React.FC = () => {
-  return (
-     <Home/>
+  return (   
+      <Routes/> 
   );
 };
-
 
 export default App;

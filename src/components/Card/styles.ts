@@ -10,7 +10,7 @@ export const Container = styled.View`
 export const CardView = styled.View`
   flex-direction: row;
   justify-content: space-between;
-  background-color: #434273;
+  background-color: #873679;
   border-radius: 15px;
   padding: 15px;
   width: auto;

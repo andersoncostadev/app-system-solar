@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import {Background, Container,IconContainer, Icon} from './styles'
+import {Background, Container, IconContainer, Icon} from './styles';
 
 const Home: React.FC = () => {
-  return(
+  return (
     <Background>
       <Container>
         <IconContainer>
-          <Icon/>
+          <Icon />
         </IconContainer>
       </Container>
     </Background>

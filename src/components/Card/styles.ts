@@ -34,12 +34,12 @@ export const InfoView = styled.View`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 5px;
 `;
 
 export const InfoPlanet = styled.Text`
-  font-size: 20px;
+  font-size: 17px;
   color: #ffffff;
+  padding: 7px;
 `;
 
 export const Title = styled.Text`

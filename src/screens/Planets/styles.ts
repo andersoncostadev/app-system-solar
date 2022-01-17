@@ -19,3 +19,7 @@ export const Image = styled(ImageBackground).attrs({
 export const TouchablePlanet = styled.TouchableOpacity`
   flex: 1;
 `;
+
+export const Load = styled.View`
+  align-items: center;
+`;

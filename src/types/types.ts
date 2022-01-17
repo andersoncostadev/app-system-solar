@@ -5,3 +5,10 @@ export interface IPlanet {
   size: string;
   temperature: string;
 }
+
+export interface IDetails {
+  id?: number;
+  image: string;
+  name: string;
+  curiosity: string;
+}

@@ -1,14 +1,24 @@
-import React from "react";
+import React from 'react';
 
-import {Background, Container,IconContainer, Icon} from './styles'
+import {
+  Background,
+  Container,
+  TitleContainer,
+  Title,
+  IconAstronaut,
+  AstronautContainer,
+} from './styles';
 
 const Home: React.FC = () => {
-  return(
+  return (
     <Background>
       <Container>
-        <IconContainer>
-          <Icon/>
-        </IconContainer>
+        <TitleContainer>
+          <Title>Explorer</Title>
+        </TitleContainer>
+        <AstronautContainer>
+          <IconAstronaut />
+        </AstronautContainer>
       </Container>
     </Background>
   );

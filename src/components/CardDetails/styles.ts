@@ -29,22 +29,24 @@ export const TextView = styled.View`
   flex: 1;
 `;
 
-export const InfoView = styled.View`
-  flex: 1;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-export const InfoPlanet = styled.Text`
-  font-size: 17px;
-  color: #ffffff;
-  padding: 7px;
-`;
-
 export const Title = styled.Text`
   text-align: center;
-  font-size: 25px;
+  font-size: 14px;
   font-weight: bold;
   color: #ffffff;
+`;
+
+export const TitlePlanet = styled.Text`
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 10px;
+`;
+
+export const Divider = styled.View`
+  border: 1px;
+  border-style: solid;
+  border-color: #ffffff;
+  margin-bottom: 15px;
 `;

@@ -10,4 +10,7 @@ export interface IDetails {
   image?: string;
   name: string;
   curiosity: string;
+  distance_sun: string;
+  duration_day: string;
+  orbital_period: string;
 }

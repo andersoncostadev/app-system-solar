@@ -13,8 +13,8 @@ import {
   Title,
   TextBox,
   ImageCard,
-  ContainerPlanet,
   Divider,
+  TextTitle,
 } from './styles';
 
 const Details: React.FC = () => {
@@ -62,6 +62,15 @@ const Details: React.FC = () => {
         <Title>{details?.name}</Title>
         <Divider />
         <TextBox>{details?.curiosity}</TextBox>
+        <Divider />
+        <TextTitle>Período Orbital</TextTitle>
+        <TextBox>{details?.orbital_period}</TextBox>
+        <Divider />
+        <TextTitle>Duração do Dia</TextTitle>
+        <TextBox>{details?.duration_day}</TextBox>
+        <Divider />
+        <TextTitle>Distância do Sol</TextTitle>
+        <TextBox>{details?.distance_sun}</TextBox>
       </PlanetDetails>
     </Image>
   );

@@ -1,8 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import {FlatList} from 'react-native';
+import {useDispatch} from 'react-redux';
 import Card from '../../components/Card';
 import api from '../../services/api';
 import {IPlanet} from '../../types/types';
+import {IPlanetsDetails} from '../../Store/Modules/PlanetDetails/Types';
+import detailsPlanet from '../../Store/Modules/PlanetDetails/Actions';
 import {useNavigation} from '@react-navigation/native';
 import LottieView from 'lottie-react-native';
 
@@ -12,9 +15,14 @@ const Planets: React.FC = () => {
   const [data, setData] = useState<IPlanet[]>([]);
   const [isload, setIsLoad] = useState(false);
 
+  const dispatch = useDispatch();
   const nav = useNavigation();
 
-  const handlePlanetDetails = (screen: any) => {
+  const handlePlanetDetails = (val: string, screen: any) => {
+    const newDetails: IPlanetsDetails = {
+      planet_id: val,
+    };
+    dispatch(detailsPlanet(newDetails));
     nav.navigate(screen);
   };
 
@@ -55,9 +63,8 @@ const Planets: React.FC = () => {
           renderItem={({item}) => (
             <TouchablePlanet
               activeOpacity={0.7}
-              onPress={() => handlePlanetDetails('Details')}>
+              onPress={() => handlePlanetDetails(item.id, 'Details')}>
               <Card
-                id={item.id}
                 name={item.name}
                 image={item.image}
                 temperature={item.temperature}

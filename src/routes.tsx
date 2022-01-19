@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {NavigationContainer} from '@react-navigation/native';
+import {DefaultTheme, NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
@@ -15,7 +15,7 @@ const NavigationTabs = () => {
     <Tabs.Navigator
       initialRouteName="Home"
       screenOptions={{
-        tabBarActiveTintColor: '#873679',
+        tabBarActiveTintColor: '#875AFD',
         tabBarInactiveTintColor: '#FFFFFF',
         tabBarLabelStyle: {fontSize: 15},
         tabBarStyle: {backgroundColor: '#000'},
@@ -23,6 +23,7 @@ const NavigationTabs = () => {
       <Tabs.Screen
         name="Home"
         options={{
+          headerShown: false,
           tabBarLabel: 'Home',
           tabBarIcon: ({color, size}) => (
             <MaterialCommunityIcons name="home" color={color} size={size} />
@@ -34,6 +35,7 @@ const NavigationTabs = () => {
       <Tabs.Screen
         name="Planets"
         options={{
+          headerShown: false,
           tabBarLabel: 'Planets',
           tabBarIcon: ({color, size}) => (
             <MaterialCommunityIcons
@@ -65,35 +67,21 @@ const NavigationTabs = () => {
 };
 
 const Routes: React.FC = () => {
+  const MyTheme = {
+    ...DefaultTheme,
+    colors: {
+      ...DefaultTheme.colors,
+      primary: 'rgb(255, 255, 255)',
+      card: '#875AFD',
+      background: '#000000',
+      text: '#FFF',
+    },
+  };
   return (
-    <NavigationContainer>
+    <NavigationContainer theme={MyTheme}>
       <NavigationTabs />
     </NavigationContainer>
   );
 };
 
 export default Routes;
-
-// import React from "react";
-
-// import {NavigationContainer} from '@react-navigation/native';
-// import {createStackNavigator} from '@react-navigation/stack';
-
-// import Planets from "./Screens/Planets";
-// import Details from "./Screens/Details";
-
-// const Routes: React.FC = () => {
-//   const Stack = createStackNavigator();
-
-//   return (
-//     <NavigationContainer>
-//       <Stack.Navigator>
-//         <Stack.Screen name="Planets"component={Planets}/>
-//         <Stack.Screen name="Details"component={Details}/>
-//       </Stack.Navigator>
-//     </NavigationContainer>
-
-//   );
-// };
-
-// export default Routes;

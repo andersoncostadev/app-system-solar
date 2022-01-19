@@ -1,5 +1,5 @@
 export interface IPlanet {
-  id?: number;
+  id?: string;
   name: string;
   image: string;
   size: string;
@@ -7,8 +7,7 @@ export interface IPlanet {
 }
 
 export interface IDetails {
-  id?: number;
-  image: string;
+  image?: string;
   name: string;
   curiosity: string;
 }
